@@ -1,0 +1,5 @@
+{% extends 'sidenav.html' %}
+{% block app_index %}
+    {{ block.super }}
+    <a class="app-index" href="{% url "users:index" %}">Users</a>
+{% endblock %}

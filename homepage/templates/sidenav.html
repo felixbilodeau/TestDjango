@@ -1,0 +1,12 @@
+<div class="sidenav">
+    <button class="hamburger__toggle">
+        <div class="hamburger__icon">
+            <div class="top-bar"></div>
+            <div class="middle-bar"></div>
+            <div class="bottom-bar"></div>
+        </div>
+    </button>
+    {% block app_index %}
+        <a class="app-index" href="{% url "homepage:home" %}">Home</a>
+    {% endblock %}
+</div>

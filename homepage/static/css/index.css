@@ -1,0 +1,99 @@
+.sidenav {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: hsl(208, 100%, 97%);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: hsl(0, 0%, 50%);
+    background-color: hsl(208, 100%, 97%);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a.app-index:hover {
+    color: hsl(0, 0%, 40%);
+    background-color: hsl(208, 100%, 87%);
+}
+
+.main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.hamburger__toggle {
+    display:block;
+    position: relative;
+    background-color:#3d3d3d;
+    width: 60px; 
+    height: 60px; 
+    margin:15px 15px 50px auto;
+    border-radius:50%;
+    border:none;
+}
+
+.sidenav .hamburger__toggle {
+    background-color: hsl(208, 100%, 97%);
+}
+
+.sidenav .hamburger__toggle .hamburger__icon .top-bar,
+.sidenav .hamburger__toggle .hamburger__icon .middle-bar,
+.sidenav .hamburger__toggle .hamburger__icon .bottom-bar {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.hamburger__toggle:hover {
+    cursor: pointer;
+}
+
+/* give the span element and related pseudo-elements the appearance of white lines */
+.hamburger__icon .top-bar,
+.hamburger__icon .middle-bar,
+.hamburger__icon .bottom-bar {
+    position: absolute;
+    width: 30px; 
+    height: 2px;
+    border-radius: 4px;
+    background-color: white;
+    left: calc(50% - 15px);
+}
+
+/* center the span element in the middle of its containing button */
+.hamburger__icon .top-bar {
+    top: calc(50% - 11px);
+}
+
+.hamburger__icon .middle-bar {
+    top: calc(50% - 1px);
+}
+
+.hamburger__icon .bottom-bar {
+    top: calc(50% + 9px);
+}
+
+/* position the two pseudo-elements to the very left*/
+.hamburger__icon .top-bar,
+.hamburger__icon .bottom-bar {
+    content: "";
+}
+
+/* TRANSITION */
+
+.hamburger__icon .top-bar, .hamburger__icon .bottom-bar {
+    transition: all 0.3s ease-out;
+}

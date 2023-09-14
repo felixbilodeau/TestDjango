@@ -9,3 +9,7 @@ class Customer(models.Model):
     email = models.EmailField()
     username = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
+
+    @property
+    def name(self):
+        return self.first_name + ' ' + self.last_name
